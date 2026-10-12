@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lavi Landman - Director of Program Management</title>
+  <meta name="description" content="Personal portfolio of Lavi Landman - Director of Program Management at Ibex Medical Analytics. Specialized in AI automation, regulatory QMS systems, and cross-functional engineering leadership.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0b0f19;
+      --card-bg: #111827;
+      --card-border: #1f293d;
+      --card-hover: #162035;
+      --accent: #3b82f6;
+      --accent-glow: rgba(59, 130, 246, 0.15);
+      --accent-light: #60a5fa;
+      --text-main: #f3f4f6;
+      --text-muted: #9ca3af;
+      --text-subtle: #6b7280;
+      --tag-bg: #1e293b;
+      --tag-text: #93c5fd;
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 0 1.5rem 4rem;
+    }
+
+    .container {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+
+    /* Hero Section */
+    header {
+      padding: 4.5rem 0 3rem;
+      border-bottom: 1px solid var(--card-border);
+      margin-bottom: 3.5rem;
+    }
+
+    .hero-wrapper {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 2.5rem;
+    }
+
+    .avatar-wrapper {
+      flex-shrink: 0;
+    }
+
+    .avatar {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      box-shadow: 0 0 25px var(--accent-glow);
+    }
+
+    .hero-info {
+      flex-grow: 1;
+    }
+
+    .hero-info h1 {
+      font-size: 2.25rem;
+      font-weight: 700;
+      letter-spacing: -0.025em;
+      color: #ffffff;
+      margin-bottom: 0.35rem;
+    }
+
+    .hero-title {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: var(--accent-light);
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-tagline {
+      font-size: 1rem;
+      color: var(--text-muted);
+      max-width: 600px;
+      margin-bottom: 1.5rem;
+    }
+
+    .links-bar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .link-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      font-size: 0.875rem;
+      font-weight: 500;
+      text-decoration: none;
+      color: var(--text-main);
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      transition: all 0.2s ease;
+    }
+
+    .link-btn:hover {
+      background: var(--card-hover);
+      border-color: var(--accent);
+      color: #ffffff;
+      transform: translateY(-2px);
+    }
+
+    .link-btn svg {
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
+    }
+
+    /* Section Headers */
+    section {
+      margin-bottom: 3.5rem;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      letter-spacing: -0.01em;
+    }
+
+    .section-title::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 18px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    /* About Card */
+    .about-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      color: var(--text-muted);
+      font-size: 0.975rem;
+      line-height: 1.7;
+    }
+
+    .about-card p:not(:last-child) {
+      margin-bottom: 1rem;
+    }
+
+    .about-highlight {
+      color: var(--text-main);
+      font-weight: 500;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .project-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: all 0.2s ease;
+    }
+
+    .project-card:hover {
+      background: var(--card-hover);
+      border-color: #2e3d5b;
+      transform: translateY(-2px);
+    }
+
+    .project-header {
+      margin-bottom: 0.85rem;
+    }
+
+    .project-category {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--accent-light);
+      margin-bottom: 0.35rem;
+    }
+
+    .project-title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffffff;
+    }
+
+    .project-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-bottom: 1.25rem;
+      line-height: 1.6;
+    }
+
+    .project-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: auto;
+    }
+
+    .tag {
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      font-size: 0.75rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      font-weight: 500;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .skills-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+    }
+
+    .skills-card h3 {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #ffffff;
+      margin-bottom: 0.75rem;
+      border-bottom: 1px solid var(--card-border);
+      padding-bottom: 0.5rem;
+    }
+
+    .skills-card ul {
+      list-style: none;
+    }
+
+    .skills-card li {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+      margin-bottom: 0.4rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .skills-card li::before {
+      content: "•";
+      color: var(--accent);
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--card-border);
+      padding-top: 2rem;
+      text-align: center;
+      color: var(--text-subtle);
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 680px) {
+      .hero-wrapper {
+        flex-direction: column;
+        text-align: center;
+      }
+      .links-bar {
+        justify-content: center;
+      }
+      .hero-info h1 {
+        font-size: 1.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+
+    <!-- Hero Header -->
+    <header>
+      <div class="hero-wrapper">
+        <div class="avatar-wrapper">
+          <img class="avatar" src="assets/profile.jpg" alt="Lavi Landman">
+        </div>
+        <div class="hero-info">
+          <h1>Lavi Landman</h1>
+          <div class="hero-title">Director of Program Management @ Ibex Medical Analytics</div>
+          <p class="hero-tagline">
+            Leading engineering program execution, AI agent workflows, and regulated medical software delivery at Ibex. Building high-leverage automation pipelines for modern product teams.
+          </p>
+          <div class="links-bar">
+            <a class="link-btn" href="https://www.linkedin.com/in/lavi-landman-4108494/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              LinkedIn
+            </a>
+            <a class="link-btn" href="https://github.com/LaviLandman" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+              GitHub
+            </a>
+            <a class="link-btn" href="https://www.facebook.com/lavi.landman/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+              Facebook
+            </a>
+            <a class="link-btn" href="mailto:lavi.landman@ibex-ai.com">
+              <svg viewBox="0 0 24 24"><path d="M0 3v18h24v-18h-24zm6.623 7.929l-4.623 5.712v-11.458l4.623 5.746zm-4.141-5.929h19.035l-9.517 7.713-9.518-7.713zm5.694 7.188l3.824 3.099 3.83-3.104 5.612 6.817h-18.779l5.513-6.812zm9.208-1.264l4.616-5.733v11.458l-4.616-5.725z"/></svg>
+              Email
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- About Section -->
+    <section>
+      <h2 class="section-title">About Me</h2>
+      <div class="about-card">
+        <p>
+          I serve as the <span class="about-highlight">Director of Program Management at Ibex Medical Analytics</span>, pioneer of AI-powered clinical diagnostics in digital pathology. My focus sits at the intersection of medical device regulatory compliance, engineering velocity, and AI innovation.
+        </p>
+        <p>
+          I lead cross-functional program planning and release execution across 14 specialized teams (including Algorithm, Backend, Clinical, Data, DevOps, QARA, SQA, and Web). Beyond traditional program management, I architect and build production automations, AI agent ecosystems, and audit-grade regulatory frameworks that multiply engineering throughput and guarantee strict compliance.
+        </p>
+        <p>
+          As an early adopter of LLM-native development and agentic workflows, I build custom tools and Claude Code skills that eliminate friction across development cycles, release notifications, translation operations, and traceability matrices.
+        </p>
+      </div>
+    </section>
+
+    <!-- Key Work at Ibex Section -->
+    <section>
+      <h2 class="section-title">Key Work & Engineering Initiatives at Ibex</h2>
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <div class="project-category">AI & Agentic Infrastructure</div>
+              <h3 class="project-title">Modular AI Skills Ecosystem</h3>
+            </div>
+            <p class="project-desc">
+              Designed and built a modular Claude Code agent ecosystem comprising 30+ versioned skills covering Atlassian automation, release coordination, translation management, and technical documentation. Eliminates hours of recurring overhead per week.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Claude Code</span>
+            <span class="tag">Python</span>
+            <span class="tag">Bash</span>
+            <span class="tag">REST APIs</span>
+            <span class="tag">MCP</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <div class="project-category">Regulatory & Traceability</div>
+              <h3 class="project-title">AI SRS & Requirement Matcher</h3>
+            </div>
+            <p class="project-desc">
+              Created an AI-powered semantic matching engine using SentenceTransformers (384-dim embeddings) and Gemini Flash to correlate development epics with system requirement specifications, generating audit-ready Jira CSV exports with confidence scores.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">SentenceTransformers</span>
+            <span class="tag">Gemini Flash</span>
+            <span class="tag">Streamlit</span>
+            <span class="tag">Jira Cloud</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <div class="project-category">Localization & NLP</div>
+              <h3 class="project-title">Privacy-First Translation Pipeline</h3>
+            </div>
+            <p class="project-desc">
+              Engineered an end-to-end multi-language localization framework for the Ibex platform across 7 European languages. Integrates automated placeholder audits ({stain}, {caseId}), semantic memory reuse via spaCy, and local MarianMT inference.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Python</span>
+            <span class="tag">spaCy</span>
+            <span class="tag">MarianMT</span>
+            <span class="tag">Pandas</span>
+            <span class="tag">Localization</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <div class="project-category">Platform Infrastructure</div>
+              <h3 class="project-title">Cross-Functional Agile Infrastructure</h3>
+            </div>
+            <p class="project-desc">
+              Architected standardized Scrum boards, custom JQL filters, and automated Story Point aggregation rules across 14 teams. Built real-time Groovy ScriptRunner and Jira Expression gates enforcing upstream requirement links prior to development.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">Jira Cloud</span>
+            <span class="tag">Groovy ScriptRunner</span>
+            <span class="tag">Automation</span>
+            <span class="tag">JQL</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <div class="project-category">DevOps & Release</div>
+              <h3 class="project-title">Release Auditing & Notifier</h3>
+            </div>
+            <p class="project-desc">
+              Developed GitHub Actions and CLI pipelines correlating Git tags, PR merges, and Jira ticket references. Automatically updates tickets with release metadata, providing seamless traceability for regulatory audits.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">GitHub Actions</span>
+            <span class="tag">Python</span>
+            <span class="tag">Regex</span>
+            <span class="tag">Jira REST API</span>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div>
+            <div class="project-header">
+              <div class="project-category">AI Web Application</div>
+              <h3 class="project-title">AI RFP & Questionnaire Assistant</h3>
+            </div>
+            <p class="project-desc">
+              Built a responsive web application that parses security questionnaires and RFPs, performs semantic search against knowledge bases, and uses Google Gemini to generate verified, compliant answers with DOCX export.
+            </p>
+          </div>
+          <div class="project-tags">
+            <span class="tag">React</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">Tailwind</span>
+            <span class="tag">Gemini API</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Skills & Expertise -->
+    <section>
+      <h2 class="section-title">Core Competencies & Stack</h2>
+      <div class="skills-grid">
+        <div class="skills-card">
+          <h3>Program Management</h3>
+          <ul>
+            <li>Agile / Scrum Delivery</li>
+            <li>Quarterly Planning (14 Teams)</li>
+            <li>Release Readiness Governance</li>
+            <li>Risk & CCB Management</li>
+            <li>Cross-Functional Alignment</li>
+          </ul>
+        </div>
+        <div class="skills-card">
+          <h3>AI & Automation</h3>
+          <ul>
+            <li>Claude Code Agent Workflows</li>
+            <li>LLM APIs (Gemini, Claude)</li>
+            <li>SentenceTransformers & Embeddings</li>
+            <li>Local NLP (spaCy, MarianMT)</li>
+            <li>Custom MCP Tooling</li>
+          </ul>
+        </div>
+        <div class="skills-card">
+          <h3>Engineering & Tools</h3>
+          <ul>
+            <li>Python, Bash, Node.js</li>
+            <li>Atlassian (Jira, Confluence, Xray)</li>
+            <li>Groovy ScriptRunner & JQL</li>
+            <li>GitHub Actions & Git</li>
+            <li>Google Workspace APIs</li>
+          </ul>
+        </div>
+        <div class="skills-card">
+          <h3>Healthcare / QMS</h3>
+          <ul>
+            <li>Medical Device Software Lifecycle</li>
+            <li>SRS & Traceability Frameworks</li>
+            <li>Regulatory Audit Trail Integrity</li>
+            <li>Multi-Language Localization</li>
+            <li>Quality Management Systems</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2026 Lavi Landman. Hosted on GitHub Pages.</p>
+    </footer>
+
+  </div>
+
+</body>
+</html>
